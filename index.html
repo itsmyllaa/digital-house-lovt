@@ -13,11 +13,15 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>LOVT</h1>
+                <h1 id="logo">LOVT</h1>
                 <h2>You Love, <br>
                     your loft!</h2>
             </div>
+
+            <p class="olaUsuario"></p>
+
             <div class="btn-menu">
+                <button class="btn-toggle-mode" onclick="toggleMode()">mudar tema</button>
                 <button>☰</button>
             </div>
         </div>
@@ -57,7 +61,7 @@
                     <div class="info">
                         <div class="flex-between">
                             <strong class="price">$ 2,000</strong>
-                            <span class="tag  tag-orange">Sale</span>
+                            <span class="tag tag-orange">Sale</span>
                         </div>
                         <p>Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir, sentado sem
                             cochilar e fazendo pose. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
@@ -69,22 +73,37 @@
         <section class="styles">
             <div class="container">
                 <h2>Your Style</h2>
-                <article style="background-image: url('img/');">
+                <article style="background-image: url('img/industrial.png');">
                     <h3>Industrial</h3>
                 </article>
-                <article style="background-image: url('img/');">
+                <article style="background-image: url('img/moderno.png');">
                     <h3>Modern</h3>
                 </article>
-                <article style="background-image: url('img/');">
+                <article style="background-image: url('img/classico.png');">
                     <h3>Classic</h3>
                 </article>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <form id="form_contact" action="thanks.html">
+                    <input type="text" name="nome" id="input_nome" placeholder="Nome">
+                    <input type="email" name="email" id="input_email" placeholder="Email">
+                    <input type="tel" name="telefone" id="input_telefone" placeholder="Telefone">
+                    <textarea name="mensagem" id="input_mensagem" cols="30" rows="10"></textarea>
+                    <div class="mensagem-erro"></div>
+                    <button type="submit" id="btn-submit-contact">enviar</button>
+                </form>
             </div>
         </section>
     </main>
     <footer>
         <div class="container">
             <div class="map">
-
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14631.57361412052!2d-46.78016997730711!3d-23.536336067227932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50ab7feb4519%3A0x739f0ddb0439cf94!2sDigital%20House%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1619466660175!5m2!1spt-BR!2sbr"
+                    width="10%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="info">
                 <p>LOVT - You love, your loft!</p>
@@ -98,6 +117,23 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                Newsletter
+                <button class="close" onclick="btnClose()">x</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="text" name="Nome">
+                    <input type="email" name="email">
+                    <button type="submit">enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
